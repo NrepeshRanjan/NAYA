@@ -60,6 +60,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         passwordHash: userData.passwordHash!,
         role: Role.STUDENT, // Default signup is always student
         createdAt: Date.now(),
+        // Fix: isBlocked is required by User interface
+        isBlocked: false,
         classGrade: userData.classGrade,
         subscriptionType: userData.subscriptionType,
         isPaid: false, // Must pay after signup
